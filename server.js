@@ -1,10 +1,24 @@
-var orm = require("./config/orm.js");
+var express = require("express");
 
-// Find all the pets ordering by the lowest price to the highest price.
-orm.selectAndOrder("burger_name", "burger", "price");
+var PORT = process.env.PORT || 8000;
+var app = express();
 
-// Find a pet in the pets table by an animal_name of Rachel.
-orm.selectWhere("burger", "burger_name", "Rachel");
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
 
-// Find the buyer with the most pets.
-orm.findWhoHasMost("buyer_name", "buyer_id", "buyers", "pets");
+// Parse application body
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+var routes = require("./controllers/burgersController.js");
+
+app.use(routes);
+
+app.listen(PORT, function() {
+  console.log("Listening on port:%s", PORT);
+});
