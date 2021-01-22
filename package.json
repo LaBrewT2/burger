@@ -20,6 +20,11 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
-    "handlebars": "^4.7.6"
+    "handlebars": "^4.7.6",
+    "mysql": "^2.18.1",
+    "sequelize": "^6.4.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
   }
 }
