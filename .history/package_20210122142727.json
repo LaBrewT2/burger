@@ -17,11 +17,10 @@
     "url": "https://github.com/LaBrewT2/burger/issues"
   },
   "engines": {
-    "node": "12.18.4"
+    "node": "12"
   },
   "homepage": "https://github.com/LaBrewT2/burger#readme",
   "dependencies": {
-    "debug": "^4.3.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "handlebars": "^4.7.6",

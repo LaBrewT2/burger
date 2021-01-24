@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/LaBrewT2/burger#readme",
   "dependencies": {
-    "debug": "^4.3.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "handlebars": "^4.7.6",
